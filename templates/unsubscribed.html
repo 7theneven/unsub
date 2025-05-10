@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unsubscribe</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .unsubscribe-btn {
+      padding: 15px 30px;
+      background-color: #ff4d4d;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .unsubscribe-btn:hover {
+      background-color: #e04343;
+    }
+
+    .resubscribe-btn {
+      padding: 15px 30px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .resubscribe-btn:hover {
+      background-color: #45a049;
+    }
+
+    .message {
+      font-size: 14px;
+      color: #777;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>You've Unsubscribed!</h1>
+    <p>We're sorry to see you go. If you change your mind, you can always resubscribe.</p>
+
+    <button class="unsubscribe-btn">Unsubscribe</button>
+    <button class="resubscribe-btn" onclick="window.location.href='your-resubscribe-url-here';">Resubscribe</button>
+
+    <p class="message">If you ever need us again, feel free to reach out!</p>
+  </div>
+
+</body>
+</html>
