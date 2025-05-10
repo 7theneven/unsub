@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, redirect, url_for
 import requests
 
 app = Flask(__name__)
@@ -13,7 +13,8 @@ def unsubscribe():
         requests.post(WEBHOOK_URL, json={"event": "unsubscribe"})
     except Exception as e:
         print("Webhook error:", e)
-    return render_template("unsubscribed.html")
+    # Redirect to the static unsubscribed.html in the public/ folder
+    return redirect("/unsubscribed.html")
 
 @app.route("/resubscribe", methods=["POST"])
 def resubscribe():
@@ -32,4 +33,4 @@ def home():
         </form>
     '''
 
-# Remove app.run(), as it's not needed in serverless environments.
+# Don't include app.run() in serverless functions
