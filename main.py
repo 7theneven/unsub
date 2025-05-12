@@ -13,7 +13,7 @@ def unsubscribe():
         requests.post(WEBHOOK_URL, json={"event": "unsubscribe", "email": email})
     except Exception as e:
         print("Webhook error:", e)
-    return render_template("unsubscribed.html", message="You've been unsubscribed.", message2="We're sorry to see you go. You can resubscribe anytime.")
+    return render_template("unsubscribed.html", message="You've been unsubscribed.", message2="We're sorry to see you go. You can resubscribe anytime.", email=email)
 
 @app.route("/resubscribe", methods=["GET", "POST"])
 def resubscribe():
