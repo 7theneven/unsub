@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
 import requests
+import os
 
 app = Flask(__name__)
 
-# Replace with your actual webhook URL
-WEBHOOK_URL = "https://hook.eu2.make.com/awqdudldubiobp6b7pllaomx66ttfhaj"
+# Get webhook URL from environment variable
+WEBHOOK_URL = os.environ.get("MAKE_WEBHOOK_URL")
 
 @app.route("/unsubscribe", methods=["GET", "POST"])
 def unsubscribe():
@@ -33,8 +34,6 @@ def home():
             <button type="submit">Unsubscribe</button>
         </form>
     '''
-
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
